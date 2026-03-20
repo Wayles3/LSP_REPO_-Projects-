@@ -4,17 +4,18 @@
 
 ### AI Tool: Claude (Anthropic)
 
-**What I asked:** I asked Claude to explain how a LinkedHashMap works
+**What I asked:** Explain how a LinkedHashMap works
 and why it would be a good choice for storing tasks by ID.
 
-**How it helped:** Claude explained that LinkedHashMap prevents duplicate
-keys and preserves insertion order, which helped me decide to use it
-in TaskManager. I wrote the implementation myself based on that
-understanding.
+**How it helped:** LinkedHashMap prevents duplicate keys and preserves
+insertion order, which makes it a good fit for storing tasks by ID in
+TaskManager.
 
 **What I asked:** I asked Claude to clarify the difference between
 returning null and throwing an exception in Java.
 
-**How it helped:** This helped me decide that findTask() should return
-null when a task is not found, while addTask() should throw
-IllegalArgumentException for duplicate IDs, as required by the spec.
+**How it helped:** Returning null is appropriate when a value is simply
+not found, while throwing an exception is better when an illegal
+operation is attempted.
+findTask() should return null and addTask() should throw IllegalArgumentException for
+duplicate IDs.

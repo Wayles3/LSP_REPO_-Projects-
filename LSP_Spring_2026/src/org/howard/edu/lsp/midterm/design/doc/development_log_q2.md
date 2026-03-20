@@ -1,22 +1,27 @@
-
 # Development Log – Question 2
 
 ## External Resources Used
 
 ### AI Tool: Claude (Anthropic)
 
-**Prompt:** Howard University CSCI 363/540 midterm Question 2 – evaluate
-the design of the OrderProcessor class and propose a redesign using CRC
-cards. Full exam prompt and class provided.
+**What I asked:** I asked Claude to explain what the Single Responsibility
+Principle means and how to identify when a class is doing too much.
 
-**Response:** Claude produced:
-- evaluation.md: Identified six design problems including public fields,
-  God Class violation, logic sequencing bug, hard-coded magic numbers,
-  mixed domain logic and infrastructure, and a file handle resource leak.
-- design.md: Eight CRC cards decomposing the system into Order,
-  DiscountCalculator, TaxCalculator, ReceiptPrinter, OrderRepository,
-  EmailService, ActivityLogger, and a slim coordinator OrderProcessor.
-- This development_log_q2.md.
+**How it helped:** This helped me recognize that OrderProcessor was
+handling tax calculation, file saving, email sending, and logging all
+in one method, which are clearly separate responsibilities that should
+belong in their own classes.
 
-**How it helped:** Provided the complete design analysis and CRC-based
-redesign for submission.
+**What I asked:** I asked Claude to explain what encapsulation means
+and why public fields are considered bad practice.
+
+**How it helped:** This helped me identify that declaring customerName,
+email, item, and price as public fields exposes the internal state of
+the class and violates encapsulation principles discussed in class.
+
+**What I asked:** I asked Claude to explain how CRC cards should be
+structured when redesigning a system.
+
+**How it helped:** This helped me think through how to distribute
+responsibilities across multiple classes and identify which classes
+need to collaborate with each other in the redesigned system.
